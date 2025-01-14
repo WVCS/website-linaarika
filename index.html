@@ -1,41 +1,125 @@
+<!DOCTYPE html>
 <html>
-  <html>
-  </head
-  <body>
-    <center>
-      <h4> Linaarika's Website </h4>
-      
-      <img src="https://img.freepik.com/premium-photo/red-candle-is-burning-red-background_176402-7147.jpg">
-      </body>
-  </html>
-
+<head>
   <style>
     body {
-  background-color: red;
-}
+      background-color: red;
+    }
 
-h4 {
-  color: yellow;
-  font-size: 25px;
-  text-decoration: underline maroon 10px;
-  letter-spacing: 4px;
-  text-shadow: 2px 3px 3px black;
-}
+    #home {
+      display: block;
+    }
 
-h4:hover {
-  color: black;
-  font-size: 30px;
-  text-shadow: 2px 1px 2px yellow;
-}
+    #works {
+      display: none;
+    }
 
-img {
-  width: 10%;
-  length: 10%;
-  
-}
+    .menu-bar {
+      display: flex;
+      justify-content: center;
+      background-color: maroon;
+      padding: 10px 0;
+      top: 0;
+    }
 
-img:hover {
-  width: 20%;
-  length: 10%;
-}
+    .menu-bar a {
+      color: yellow;
+      margin: 0 15px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .menu-bar a:hover {
+      color: black;
+      font-size: 22px;
+      text-shadow: 2px 1px 2px yellow;
+    }
+
+    h4{
+      color: yellow;
+      font-size: 25px;
+      text-decoration: underline maroon 10px;
+      letter-spacing: 4px;
+      text-shadow: 2px 3px 3px black;
+    }
+    
+    h5{
+      color: yellow;
+      font-size: 25px;
+      text-decoration: underline maroon 10px;
+      letter-spacing: 4px;
+      text-shadow: 2px 3px 3px black;
+    }
+
+    h4:hover {
+      color: black;
+      font-size: 30px;
+      text-shadow: 2px 1px 2px yellow;
+    }
+
+    img {
+      width: 10%;
+      height: auto;
+    }
+
+    img:hover {
+      width: 20%;
+    }
   </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('works')">Works</a>
+  </div>
+
+  <center>
+    <section id="home">
+      <h4>Linaarika's Website</h4>
+      <img src="https://img.freepik.com/premium-photo/red-candle-is-burning-red-background_176402-7147.jpg" alt="Burning Candle">
+    </section>
+
+    <section id="works">
+      <h5>Linaarika's Works</h5>
+      <table>
+        <tr>
+          
+          
+        <th><iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/oZBO6JC-00I749n10Xs2kpg4-A45s9n9tyHc3bioJf4/embed"></iframe></th>
+          
+          <th><iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/vG0zE6Z4WSgmsLguAqOTiU6jPatN-QqKPLLzzfqMAhA/embed"></iframe></th>
+          
+          
+          
+        
+        </tr>
+        
+        <tr>
+          <th>
+            <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/TuhhrK4o3YUEuHt8KiPvCmP9HVaogcxZGAzIaxh9aRo/embed"></iframe>
+          </th>
+          
+          
+          <th>
+            <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/vv_FGyIo59zlAtaygwUcplCQN-KImmlKDHrA9kPR04Q/embed"></iframe>
+          </th>
+        </tr>
+      </table>
+      
+      
+      
+    </section>
+  </center>
+
+  <script>
+    function showSection(section) {
+  if (section === 'home') {
+document.getElementById('home').style.display = 'block'; document.getElementById('works').style.display = 'none';
+  } else if (section === 'works') {
+document.getElementById('home').style.display = 'none';
+document.getElementById('works').style.display = 'block';
+  }
+}
+  </script>
+</body>
+</html>
